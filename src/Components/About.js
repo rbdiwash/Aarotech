@@ -15,7 +15,7 @@ const About = () => {
             data-aos="fade-up"
             data-aos-duration="2000"
           >
-            About <span className="primary">Aarotech</span>
+            About <span className="primary">AARO TECH</span>
           </h2>
         </div>
         <div className="flex  items-center flex-wrap">
@@ -36,8 +36,8 @@ const About = () => {
                     all your material needs, building material supplier in
                     Qatar. Our motive is not just to sell, but be your companion
                     in buying the best quality building materials to build your
-                    dream home.. Also we do provided our Services in MEP
-                    Maintenance and Civil Fit-outs.
+                    dream home. Also we provide our services in MEP Maintenance
+                    and Civil Fit-outs.
                   </div>
                 </div>
               </div>

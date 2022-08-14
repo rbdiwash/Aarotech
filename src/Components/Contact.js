@@ -95,7 +95,7 @@ const Contact = () => {
               </form>
             </div>
           </div>
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 mt-8 md:mt-0">
             <div className="ml-3 md:ml-12 wow fadeIn">
               <h2 className="uppercase font-bold text-xl text-gray-700 mb-5">
                 Get In Touch

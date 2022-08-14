@@ -41,7 +41,7 @@ const Group = () => {
                   <div className="contact-icon">
                     <FaShopify />
                   </div>
-                  <p className="pl-3 text-xl font-semibold">
+                  <p className="pl-3 md:text-xl md:font-semibold">
                     Ultimate Trading, <br /> Sanitary wares & Bathroom
                     Accessories
                   </p>

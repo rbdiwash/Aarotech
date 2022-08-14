@@ -18,6 +18,12 @@ import Team from "./Components/Team";
 import About from "./Components/About";
 import Group from "./Components/Group";
 import Slider from "react-slick";
+import trading1 from "./assets/img/trading1.png";
+import trading2 from "./assets/img/trading2.png";
+import slider1 from "./assets/img/slider1.png";
+import slider2 from "./assets/img/slider2.png";
+import slider3 from "./assets/img/slider3.png";
+import motor2 from "./assets/img/motor.png";
 
 function Buttons() {
   return (
@@ -41,7 +47,7 @@ function App() {
     fade: true,
     dots: true,
     autoplay: true,
-    speed: 500,
+    speed: 1500,
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: true,
@@ -49,24 +55,40 @@ function App() {
 
   const sliderContent = [
     {
-      heading: " All Kind of HVAC Spare Parts",
-      content:
-        "Hardware - Tools and Safety Equipments Industrial Material Suppliers",
-      image: slide3,
+      heading: "Electrical Materials",
+      content: "All kind of Building Materials",
+      image: slider3,
     },
     {
-      heading: "Motor Rewinding & Repair",
-      content:
-        "Hardware - Tools and Safety Equipments Industrial Material Suppliers",
-      image: about,
+      heading: "Plumbing Materials",
+      content: "All kind of Building Materials",
+      image: slider2,
     },
     {
-      heading: "All Kind of Plumbing Materials",
-      content:
-        "Hardware - Tools and Safety Equipments Industrial Material Suppliers",
-      image: services,
+      heading: "HVAC Spare Parts",
+      content: "All kind of Building Materials",
+      image: slider1,
     },
   ];
+  const servicesContent = [
+    {
+      heading: "Manpower Supply",
+      image: manpower,
+    },
+    {
+      heading: "Motor Rewinding and Repair",
+      image: motor,
+    },
+    {
+      heading: "Power Tools/ Equipment Rent",
+      image: trading1,
+    },
+    {
+      heading: "MEP Maintenance & Civil Fit-outs",
+      image: trading2,
+    },
+  ];
+
   return (
     <div className="App">
       <Navbar />
@@ -110,7 +132,7 @@ function App() {
             {sliderContent.map((item, index) => (
               <div className="">
                 <div
-                  className="p-4 block py-32"
+                  className="p-4 py-32"
                   style={{
                     backgroundImage: `url(${item.image})`,
                     width: "100%",
@@ -120,10 +142,12 @@ function App() {
                     backgroundPosition: "center",
                   }}
                 >
-                  <div className="container py-16">
+                  <div className="md:container py-16">
                     <div
                       className={`${
-                        index === 1 ? "w-1/2 ml-auto text-right" : "w-1/2"
+                        index === 1
+                          ? "md:w-1/2 w-full md:ml-auto md:text-right"
+                          : "md:w-1/2 w-full"
                       }`}
                     >
                       <h3 className="text-5xl primary">{item.heading}</h3>
@@ -150,77 +174,55 @@ function App() {
               Our <span className="primary">Services</span>
             </h2>
           </div>
+          {/* <Slider {...settings}>
+            {servicesContent.map((item, index) => (
+              <div className="">
+                <div
+                  className="p-4 block py-32"
+                  style={{
+                    backgroundImage: `url(${item.image})`,
+                    width: "100%",
+                    height: "100%",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                >
+                  <div className="container py-16">
+                    <div
+                      className={`${
+                        index === 1 ? "w-1/2 ml-auto text-right" : "w-1/2"
+                      }`}
+                    >
+                      <h3 className="text-5xl primary">{item.heading}</h3>
+                      <h2 className="text-2xl my-10 mb-12 font-semibold">
+                        {item.content}
+                      </h2>
+                      <Buttons />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </Slider> */}
+
           <div className="flex flex-wrap">
-            <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4">
-              <div className="m-4 " data-aos="fade-up" data-aos-delay="200">
-                <div className="icon text-7xl rounded shadow-lg p-4 min-h-[350px]">
-                  <img src={manpower} alt="manpower image" />
-                </div>
-                <div>
-                  <h3 className="service-title">Manpower Supply</h3>
-                  <p className="text-gray-600">
-                    Electrical, Plumbing, AC Spare Parts Many other items.. ...
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4">
-              <div
-                className="m-4 wow fadeInRight"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                <div className="icon text-7xl rounded shadow-lg p-4 min-h-[350px]">
-                  <img src={motor} alt="manpower image" />
-                </div>
-                <div>
-                  <h3 className="service-title">
-                    Motor Rewinding and Services
-                  </h3>
-                  <p className="text-gray-600">
-                    Motor Rewinding and Services ...
-                  </p>
+            {servicesContent.map((item, index) => (
+              <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4" key={index}>
+                <div className="m-4 " data-aos="fade-up" data-aos-delay="200">
+                  <div className="icon text-7xl rounded shadow-lg p-4 min-h-[350px]">
+                    <img
+                      src={item.image}
+                      alt="manpower image "
+                      className="object-contain h-full w-full"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="service-title">{item.heading}</h3>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4">
-              <div
-                className="m-4 wow fadeInRight"
-                data-aos="fade-up"
-                data-aos-delay="400"
-              >
-                <div className="icon text-7xl">
-                  <AiFillBug />
-                </div>
-                <div>
-                  <h3 className="service-title">Power Tools/ Equipment Rent</h3>
-                  <p className="text-gray-600">
-                    In order to leverage maximum workforce productivity, reduce
-                    the risk of injury, and minimize costly downtime,...
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4">
-              <div
-                className="m-4 wow fadeInRight"
-                data-aos="fade-up"
-                data-aos-delay="400"
-              >
-                <div className="icon text-7xl">
-                  <AiFillBug />
-                </div>
-                <div>
-                  <h3 className="service-title">
-                    MEP Maintenance & Civil Fit-outs
-                  </h3>
-                  <p className="text-gray-600">
-                    In order to leverage maximum workforce productivity, reduce
-                    the risk of injury, and minimize costly downtime,...
-                  </p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -230,9 +232,9 @@ function App() {
       <div id="group" className=" py-24">
         <Group />
       </div>
-      <section id="team" className="py-24 text-center">
+      {/* <section id="team" className="py-24 text-center">
         <Team />
-      </section>
+      </section> */}
       <section id="Subscribes" className="text-center py-20 bg-blue-100">
         <div className="container" data-aos="fade-up" data-aos-duration="2000">
           <div className="flex justify-center mx-3">
