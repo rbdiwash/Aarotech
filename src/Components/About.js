@@ -1,5 +1,5 @@
 import React from "react";
-import about from "../assets/img/feature/img-1.svg";
+import about from "../assets/img/about.jpg";
 import { useEffect } from "react";
 import Aos from "aos";
 const About = () => {
@@ -9,6 +9,15 @@ const About = () => {
   return (
     <>
       <div className="container">
+        <div className="text-center">
+          <h2
+            className="mb-12 section-heading wow fadeInDown"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            About <span className="primary">Aarotech</span>
+          </h2>
+        </div>
         <div className="flex  items-center flex-wrap">
           <div className="w-full lg:w-1/2" data-aos="fade-right">
             <div className="mb-5 lg:mb-0">
@@ -21,64 +30,14 @@ const About = () => {
               </h2>
 
               <div className="flex flex-wrap">
-                <div className="w-full sm:w-1/2 lg:w-1/2">
-                  <div className="m-3">
-                    <div className="icon text-4xl">
-                      <i className="lni lni-layers"></i>
-                    </div>
-                    <div className="features-content">
-                      <h4 className="feature-title">Built with TailwindCSS</h4>
-                      <p>
-                        {" "}
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Veniam tempora quidem vel sint.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full sm:w-1/2 lg:w-1/2">
-                  <div className="m-3">
-                    <div className="icon text-4xl">
-                      <i className="lni lni-gift"></i>
-                    </div>
-                    <div className="features-content">
-                      <h4 className="feature-title">Free to Use</h4>
-                      <p>
-                        {" "}
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Veniam tempora quidem vel sint.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full sm:w-1/2 lg:w-1/2">
-                  <div className="m-3">
-                    <div className="icon text-4xl">
-                      <i className="lni lni-laptop-phone"></i>
-                    </div>
-                    <div className="features-content">
-                      <h4 className="feature-title">Fully Responsive</h4>
-                      <p>
-                        {" "}
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Veniam tempora quidem vel sint.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full sm:w-1/2 lg:w-1/2">
-                  <div className="m-3">
-                    <div className="icon text-4xl">
-                      <i className="lni lni-leaf"></i>
-                    </div>
-                    <div className="features-content">
-                      <h4 className="feature-title">Easy to Customize</h4>
-                      <p>
-                        {" "}
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Veniam tempora quidem vel sint.
-                      </p>
-                    </div>
+                <div className="w-full md:w-2/3">
+                  <div className="mr-3 pr-6 text-lg text-justify">
+                    AARO TECH Trading & Contracting is the one-stop solution for
+                    all your material needs, building material supplier in
+                    Qatar. Our motive is not just to sell, but be your companion
+                    in buying the best quality building materials to build your
+                    dream home.. Also we do provided our Services in MEP
+                    Maintenance and Civil Fit-outs.
                   </div>
                 </div>
               </div>
@@ -86,7 +45,7 @@ const About = () => {
           </div>
           <div className="w-full lg:w-1/2" data-aos="fade-left">
             <div
-              className="mx-3 lg:mr-0 lg:ml-3 wow fadeInRight"
+              className="mx-3 lg:mr-0 lg:ml-3 wow fadeInRight cursor-pointer hover:scale-105 transform transition duration-500"
               data-wow-delay="0.3s"
             >
               <img src={about} alt="" />

@@ -17,10 +17,16 @@ body {
     @apply text-[#ec1f24];
   }
   .btn {
-    @apply text-white bg-[#ec1f24] px-10 py-3 rounded-full duration-300;
+    @apply text-white bg-[#ec1f24] px-10 py-3 rounded-full duration-300 cursor-pointer;
   }
   .btn:hover {
     @apply bg-[#c03236];
+  }
+  .btn-alt {
+    @apply text-[#ec1f24] border border-[#ec1f24] px-10 py-3 rounded-full duration-300 cursor-pointer;
+  }
+  .btn-alt:hover {
+    @apply bg-[#ec1f24] text-white;
   }
   .sticky {
     @apply fixed bg-white shadow;

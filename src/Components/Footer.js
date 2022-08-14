@@ -1,7 +1,7 @@
 import React from "react";
 import { BsFacebook } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
-import logo from "../assets/WhiteLogo.jpeg";
+import logo from "../assets/img/logo_bg.png";
 import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
 const Footer = () => {
   return (
@@ -16,7 +16,7 @@ const Footer = () => {
               <div className="footer-logo mb-3">
                 <img src={logo} alt="" className="h-20" />
               </div>
-              <p className="text-gray-300 text-justify">
+              <p className="text-gray-300 text-justify px-4">
                 AAROTECH has been established with an excellent track of record
                 by providing industry-leading products to our valued customers
                 around the world.
