@@ -1,29 +1,46 @@
 import "./App.css";
 import React from "react";
 import Navbar from "./Components/Navbar";
-import banner from "./assets/img/hero.svg";
-
 import Footer from "./Components/Footer";
 import { BiUpArrowCircle } from "react-icons/bi";
-import { AiFillBug, AiOutlineArrowRight } from "react-icons/ai";
+import { AiOutlineArrowRight } from "react-icons/ai";
 import manpower from "./assets/img/manpower.jpg";
 import motor from "./assets/img/motor.jpeg";
 import about from "./assets/img/about.jpg";
-import services from "./assets/img/services.jpg";
-import slide3 from "./assets/img/slide3.jpg";
 import { useEffect } from "react";
 import Aos from "aos";
 import Contact from "./Components/Contact";
-import Team from "./Components/Team";
-import About from "./Components/About";
 import Group from "./Components/Group";
 import Slider from "react-slick";
 import trading1 from "./assets/img/trading1.png";
-import trading2 from "./assets/img/trading2.png";
+import mep from "./assets/img/mep.png";
 import slider1 from "./assets/img/slider1.png";
 import slider2 from "./assets/img/slider2.png";
 import slider3 from "./assets/img/slider3.png";
-import motor2 from "./assets/img/motor.png";
+import wires from "./assets/img/products/wires.jpg";
+import isolator from "./assets/img/products/isolator.jpg";
+import switches from "./assets/img/products/switches.jpg";
+import gi from "./assets/img/products/gi.jpg";
+import pvc from "./assets/img/products/pvc.png";
+import flexible from "./assets/img/products/flexible.png";
+import flexible2 from "./assets/img/products/flexible2.jpg";
+import copper from "./assets/img/products/copper.jpg";
+import AC from "./assets/img/products/AC.jpg";
+import rubber from "./assets/img/products/rubber.jpg";
+import fiver from "./assets/img/products/fiver.jpeg";
+import ACGas from "./assets/img/products/AC_gas.jpg";
+import UPVC from "./assets/img/products/upvc.jpg";
+import ppr from "./assets/img/products/ppr.jpg";
+import sanitary from "./assets/img/products/sanitary.jpg";
+import copperpipe from "./assets/img/products/copperpipe.jpg";
+import ss from "./assets/img/products/ss.jpg";
+import heater from "./assets/img/products/heater.jpg";
+import mixer from "./assets/img/products/mixer.jpg";
+import gimi from "./assets/img/products/gimi.jpg";
+import msssgi from "./assets/img/products/msssgi.jpg";
+import gi2 from "./assets/img/products/gi2.jpg";
+import wood from "./assets/img/products/wood.jpg";
+import safety from "./assets/img/products/safety.jpg";
 
 function Buttons() {
   return (
@@ -53,79 +70,109 @@ function App() {
     infinite: true,
   };
 
-  const sliderContent = [
+  const productContent = [
     {
-      heading: "Electrical Materials",
-      content: "All kind of Building Materials",
-      image: slider3,
+      heading: "Wires and Cables",
+      image: wires,
     },
     {
-      heading: "Plumbing Materials",
-      content: "All kind of Building Materials",
-      image: slider2,
+      heading: "Isolator",
+      image: isolator,
     },
     {
-      heading: "HVAC Spare Parts",
-      content: "All kind of Building Materials",
-      image: slider1,
-    },
-  ];
-  const servicesContent = [
-    {
-      heading: "Manpower Supply",
-      image: manpower,
+      heading: "Switch & Socket",
+      image: switches,
     },
     {
-      heading: "Motor Rewinding and Repair",
-      image: motor,
+      heading: "GI Conduit & Accessories",
+      image: gi,
     },
     {
-      heading: "Power Tools/ Equipment Rent",
-      image: trading1,
+      heading: "PVC Conduit & Accessories",
+      image: pvc,
     },
     {
-      heading: "MEP Maintenance & Civil Fit-outs",
-      image: trading2,
+      heading: "Flexible Cable",
+      image: flexible,
+    },
+    {
+      heading: "GI Flexible Conduit & Accessories",
+      image: flexible2,
+    },
+    {
+      heading: "AC Copper Coils",
+      image: copper,
+    },
+    {
+      heading: "AC Compressor",
+      image: AC,
+    },
+    {
+      heading: "Rubber Insulation",
+      image: rubber,
+    },
+    {
+      heading: "Fiver Glass Insulation",
+      image: fiver,
+    },
+    {
+      heading: "AC Gas",
+      image: ACGas,
+    },
+    {
+      heading: "UPVC & PVC Fittings",
+      image: UPVC,
+    },
+    {
+      heading: "PPR Pipes & Fittings",
+      image: ppr,
+    },
+    {
+      heading: "Sanitary Ware",
+      image: sanitary,
+    },
+    {
+      heading: "Copper Pipes & Fittings",
+      image: copperpipe,
+    },
+    {
+      heading: "SS, Ci, PVC Floor Trap",
+      image: ss,
+    },
+    {
+      heading: "Mixer",
+      image: mixer,
+    },
+    {
+      heading: "Heater",
+      image: heater,
+    },
+    {
+      heading: "GI & MI Fittings",
+      image: gimi,
+    },
+    {
+      heading: "MS, SS & GI Pipes",
+      image: msssgi,
+    },
+    {
+      heading: "GI & Aluminium Sheets",
+      image: gi2,
+    },
+    {
+      heading: "Wood & Plywoods",
+      image: wood,
+    },
+    {
+      heading: "Safety Items",
+      image: safety,
     },
   ];
 
   return (
     <div className="App">
       <Navbar />
-      {/* <section id="hero-area" className="bg-blue-100 pt-10 pb-10">
-        <div className="container">
-          <div className="flex justify-between">
-            <div className="w-full text-center">
-              <h2
-                className="text-4xl font-bold leading-snug text-gray-700 mb-10 wow fadeInUp"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                Aarotech-Qatar Private Limited
-                <br className="hidden lg:block" />
-              </h2>
-              <div
-                className="text-center mb-10 wow fadeInUp"
-                data-aos="fade-up"
-                data-aos-duration="1300"
-              >
-                <a href="#" rel="nofollow" className="btn">
-                  Learn More
-                </a>
-              </div>
 
-              <div
-                className="text-center wow fadeInUp"
-                data-wow-delay="1.6s"
-                data-aos="fade-up"
-                data-aos-duration="1600"
-              >
-                <img className="img-fluid mx-auto" src={banner} alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
       <section id="hero-area" className="bg-blue-100 ">
         <div className="">
           <Slider {...settings}>
@@ -163,7 +210,7 @@ function App() {
           </Slider>
         </div>
       </section>
-      <section id="services" className="py-24">
+      <section id="services" className="bg-blue-100 py-24">
         <div className="container">
           <div className="text-center">
             <h2
@@ -174,43 +221,12 @@ function App() {
               Our <span className="primary">Services</span>
             </h2>
           </div>
-          {/* <Slider {...settings}>
-            {servicesContent.map((item, index) => (
-              <div className="">
-                <div
-                  className="p-4 block py-32"
-                  style={{
-                    backgroundImage: `url(${item.image})`,
-                    width: "100%",
-                    height: "100%",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                >
-                  <div className="container py-16">
-                    <div
-                      className={`${
-                        index === 1 ? "w-1/2 ml-auto text-right" : "w-1/2"
-                      }`}
-                    >
-                      <h3 className="text-5xl primary">{item.heading}</h3>
-                      <h2 className="text-2xl my-10 mb-12 font-semibold">
-                        {item.content}
-                      </h2>
-                      <Buttons />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </Slider> */}
 
           <div className="flex flex-wrap">
             {servicesContent.map((item, index) => (
               <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4" key={index}>
                 <div className="m-4 " data-aos="fade-up" data-aos-delay="200">
-                  <div className="icon text-7xl rounded shadow-lg p-4 min-h-[350px]">
+                  <div className="icon text-7xl rounded-lg shadow-lg p-4 min-h-[350px] bg-white">
                     <img
                       src={item.image}
                       alt="manpower image "
@@ -226,8 +242,82 @@ function App() {
           </div>
         </div>
       </section>
+      <section id="products" className="py-24">
+        <div className="container">
+          <div className="text-center">
+            <h2
+              className="mb-12 section-heading wow fadeInDown"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              Our <span className="primary">Products</span>
+            </h2>
+          </div>
+          <div className="flex flex-wrap">
+            {productContent.map((item, index) => (
+              <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6" key={index}>
+                <div className="m-4 " data-aos="fade-up" data-aos-delay="200">
+                  <div className="icon text-7xl rounded-lg shadow-lg p-4 min-h-[250px] bg-white cursor-pointer transform transition duration-500 hover:scale-105">
+                    <img
+                      src={item.image}
+                      alt="manpower image "
+                      className="object-cover h-full w-full"
+                    />
+                    <p className="text-base  text-gray-500">{item.heading}</p>
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <div id="about" className="bg-blue-100 py-24">
-        <About />
+        <div className="container">
+          <div className="text-center">
+            <h2
+              className="mb-12 section-heading wow fadeInDown"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              About <span className="primary">AARO TECH</span>
+            </h2>
+          </div>
+          <div className="flex  items-center flex-wrap">
+            <div className="w-full lg:w-1/2" data-aos="fade-right">
+              <div className="mb-5 lg:mb-0">
+                <h2
+                  className="mb-12 section-heading wow fadeInDown"
+                  data-wow-delay="0.3s"
+                >
+                  We Provide Quality Service <br />
+                  <span className="primary"> In Qatar</span> With Proud!!
+                </h2>
+
+                <div className="flex flex-wrap">
+                  <div className="w-full md:w-2/3">
+                    <div className="mr-3 pr-6 text-lg text-justify">
+                      AARO TECH Trading & Contracting is the one-stop solution
+                      for all your material needs, building material supplier in
+                      Qatar. Our motive is not just to sell, but be your
+                      companion in buying the best quality building materials to
+                      build your dream home. Also we provide our services in MEP
+                      Maintenance and Civil Fit-outs.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="w-full lg:w-1/2" data-aos="fade-left">
+              <div
+                className="mx-3 lg:mr-0 lg:ml-3 wow fadeInRight cursor-pointer hover:scale-105 transform transition duration-1000"
+                data-wow-delay="0.3s"
+              >
+                <img src={about} alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div id="group" className=" py-24">
         <Group />
@@ -291,3 +381,38 @@ function App() {
 }
 
 export default App;
+const sliderContent = [
+  {
+    heading: "Electrical Materials",
+    content: "All kind of Building Materials",
+    image: slider3,
+  },
+  {
+    heading: "Plumbing Materials",
+    content: "All kind of Building Materials",
+    image: slider2,
+  },
+  {
+    heading: "HVAC Spare Parts",
+    content: "All kind of Building Materials",
+    image: slider1,
+  },
+];
+const servicesContent = [
+  {
+    heading: "Manpower Supply",
+    image: manpower,
+  },
+  {
+    heading: "Motor Rewinding and Repair",
+    image: motor,
+  },
+  {
+    heading: "Power Tools/ Equipment Rent",
+    image: trading1,
+  },
+  {
+    heading: "MEP Maintenance & Civil Fit-outs",
+    image: mep,
+  },
+];

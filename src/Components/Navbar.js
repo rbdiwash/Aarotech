@@ -90,6 +90,14 @@ const Navbar = () => {
               </li>
               <li>
                 <a
+                  href="#products"
+                  className="hover:text-[#ec1f24] hover:font-bold block uppercase text-lg py-2 pr-4 pl-3 text-gray-700 rounded md:hover:bg-transparent md:border-0  md:p-0 dark:text-gray-400  dark:hover:bg-gray-700 "
+                >
+                  Products
+                </a>
+              </li>
+              <li>
+                <a
                   href="#about"
                   className="hover:text-[#ec1f24] hover:font-bold block uppercase text-lg py-2 pr-4 pl-3 text-gray-700 rounded md:hover:bg-transparent md:border-0  md:p-0 dark:text-gray-400  dark:hover:bg-gray-700 "
                 >

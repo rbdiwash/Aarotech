@@ -3,6 +3,8 @@ import { FaPhone, FaLocationArrow, FaShopify } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { useEffect } from "react";
 import Aos from "aos";
+import group from "../assets/img/group.jpeg";
+
 const Group = () => {
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -24,7 +26,14 @@ const Group = () => {
         </div>
         <div className="flex  items-center justify-center flex-wrap">
           <div
-            className="w-full lg:w-1/2 mx-auto shadow-lg rounded-xl p-8 "
+            className="w-full lg:w-1/2 p-8 "
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <img src={group} alt="" className="w-full h-[80%]" />
+          </div>
+          <div
+            className="w-full lg:w-1/2 shadow-lg rounded-xl p-8 "
             data-aos="fade-up"
             data-aos-duration="2000"
           >
