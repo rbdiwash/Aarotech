@@ -16,11 +16,11 @@ const Footer = () => {
               <div className="footer-logo mb-3">
                 <img src={logo} alt="" className="h-20 mx-auto md:mx-0" />
               </div>
-              <p className="text-gray-300 text-justify md:px-4">
+              {/* <p className="text-gray-300 text-justify md:px-4">
                 AARO TECH has been established with an excellent track of record
                 by providing industry-leading products to our valued customers
                 around the world.
-              </p>
+              </p> */}
             </div>
           </div>
           <div

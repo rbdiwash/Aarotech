@@ -14,9 +14,10 @@ import Group from "./Components/Group";
 import Slider from "react-slick";
 import trading1 from "./assets/img/trading1.png";
 import mep from "./assets/img/mep.png";
-import slider1 from "./assets/img/slider1.png";
+import slider1 from "./assets/img/slider1.jpg";
 import slider2 from "./assets/img/slider2.png";
 import slider3 from "./assets/img/slider3.png";
+import slider4 from "./assets/img/building.jpg";
 import wires from "./assets/img/products/wires.jpg";
 import isolator from "./assets/img/products/isolator.jpg";
 import switches from "./assets/img/products/switches.jpg";
@@ -41,15 +42,34 @@ import msssgi from "./assets/img/products/msssgi.jpg";
 import gi2 from "./assets/img/products/gi2.jpg";
 import wood from "./assets/img/products/wood.jpg";
 import safety from "./assets/img/products/safety.jpg";
+import profile from "./assets/files/profile.pdf";
 
 function Buttons() {
   return (
     <>
-      <a className="btn mr-4" href="#services">
+      <a
+        className="btn mr-4"
+        href="#services"
+        onClick={(e) => e.stopPropagation()}
+      >
         Our Services
       </a>
-      <a className="btn-alt" href="#about">
-        About us
+      {/* <button
+        className="btn-alt"
+        type="button"
+        // href={require("./assets/files/profile.pdf")}
+        download
+        onClick={() => window.open(require("./assets/files/profile.pdf"))}
+      >
+        Our Profile
+      </button> */}
+      <a
+        className="btn-alt"
+        // type="button"
+        href={profile}
+        download={"Aaro tech Profile.pdf"}
+      >
+        Our Profile
       </a>
     </>
   );
@@ -60,114 +80,15 @@ function App() {
     Aos.init({ duration: 2000 });
   }, []);
   var settings = {
-    infinite: true,
+    // infinite: true,
     fade: true,
     dots: true,
-    autoplay: true,
+    // autoplay: true,
     speed: 1500,
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: true,
   };
-
-  const productContent = [
-    {
-      heading: "Wires and Cables",
-      image: wires,
-    },
-    {
-      heading: "Isolator",
-      image: isolator,
-    },
-    {
-      heading: "Switch & Socket",
-      image: switches,
-    },
-    {
-      heading: "GI Conduit & Accessories",
-      image: gi,
-    },
-    {
-      heading: "PVC Conduit & Accessories",
-      image: pvc,
-    },
-    {
-      heading: "Flexible Cable",
-      image: flexible,
-    },
-    {
-      heading: "GI Flexible Conduit & Accessories",
-      image: flexible2,
-    },
-    {
-      heading: "AC Copper Coils",
-      image: copper,
-    },
-    {
-      heading: "AC Compressor",
-      image: AC,
-    },
-    {
-      heading: "Rubber Insulation",
-      image: rubber,
-    },
-    {
-      heading: "Fiver Glass Insulation",
-      image: fiver,
-    },
-    {
-      heading: "AC Gas",
-      image: ACGas,
-    },
-    {
-      heading: "UPVC & PVC Fittings",
-      image: UPVC,
-    },
-    {
-      heading: "PPR Pipes & Fittings",
-      image: ppr,
-    },
-    {
-      heading: "Sanitary Ware",
-      image: sanitary,
-    },
-    {
-      heading: "Copper Pipes & Fittings",
-      image: copperpipe,
-    },
-    {
-      heading: "SS, Ci, PVC Floor Trap",
-      image: ss,
-    },
-    {
-      heading: "Mixer",
-      image: mixer,
-    },
-    {
-      heading: "Heater",
-      image: heater,
-    },
-    {
-      heading: "GI & MI Fittings",
-      image: gimi,
-    },
-    {
-      heading: "MS, SS & GI Pipes",
-      image: msssgi,
-    },
-    {
-      heading: "GI & Aluminium Sheets",
-      image: gi2,
-    },
-    {
-      heading: "Wood & Plywoods",
-      image: wood,
-    },
-    {
-      heading: "Safety Items",
-      image: safety,
-    },
-  ];
 
   return (
     <div className="App">
@@ -179,29 +100,36 @@ function App() {
             {sliderContent.map((item, index) => (
               <div className="">
                 <div
-                  className="p-4 py-32"
+                  className="p-4 flex items-center justify-start"
                   style={{
                     backgroundImage: `url(${item.image})`,
                     width: "100%",
-                    height: "100%",
+                    height: "550px",
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}
                 >
-                  <div className="md:container py-16">
-                    <div
-                      className={`${
-                        index === 1
-                          ? "md:w-1/2 w-full md:ml-auto md:text-right"
-                          : "md:w-1/2 w-full"
-                      }`}
-                    >
-                      <h3 className="text-5xl primary">{item.heading}</h3>
-                      <h2 className="text-2xl my-10 mb-12 font-semibold">
-                        {item.content}
-                      </h2>
-                      <Buttons />
+                  <div className="md:container  flex items-start justify-start flex-col text-left">
+                    <h3 className="text-5xl primary">{item.heading}</h3>
+                    <h2 className="text-2xl my-4 font-semibold">
+                      {item.content}
+                    </h2>
+
+                    <div className="md:flex">
+                      <a className="btn mr-4" href="#services">
+                        Our Services
+                      </a>
+
+                      <a
+                        className="btn-alt"
+                        type="button"
+                        href={profile}
+                        download={"Aarotech_Profile.pdf"}
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Our Profile
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -284,7 +212,7 @@ function App() {
             </h2>
           </div>
           <div className="flex  items-center flex-wrap">
-            <div className="w-full lg:w-1/2" data-aos="fade-right">
+            <div className="w-full lg:w-1/2 gap-12" data-aos="fade-right">
               <div className="mb-5 lg:mb-0">
                 <h2
                   className="mb-12 section-heading wow fadeInDown"
@@ -295,14 +223,17 @@ function App() {
                 </h2>
 
                 <div className="flex flex-wrap">
-                  <div className="w-full md:w-2/3">
+                  <div className="w-full">
                     <div className="mr-3 pr-6 text-lg text-justify">
-                      AARO TECH Trading & Contracting is the one-stop solution
-                      for all your material needs, building material supplier in
-                      Qatar. Our motive is not just to sell, but be your
-                      companion in buying the best quality building materials to
-                      build your dream home. Also we provide our services in MEP
-                      Maintenance and Civil Fit-outs.
+                      AARO TECH TRADING & CONT W.L.L. has been established by
+                      the good team who has more then 14 years experience in
+                      qatar in various fields of trading, building materials &
+                      MEP maintenance / Civil Fit-outs works. <br /> <br />{" "}
+                      During these 14 years, we earned better experience of up &
+                      down market level & different kind of new ethics & latest
+                      technologies in all the above fields. The aim of AARO TECH
+                      TRADING & CONT. W.L.L is to give better quality services
+                      and fulfill the client requirements with reasonable price.
                     </div>
                   </div>
                 </div>
@@ -319,9 +250,9 @@ function App() {
           </div>
         </div>
       </div>
-      <div id="group" className=" py-24">
+      {/* <div id="group" className=" py-24">
         <Group />
-      </div>
+      </div> */}
       {/* <section id="team" className="py-24 text-center">
         <Team />
       </section> */}
@@ -342,7 +273,7 @@ function App() {
                 Existing customized ideas through client-based deliverables.
                 <br /> Compellingly unleash fully tested outsourcing
               </p>
-              <form for="">
+              <form htmlFor="">
                 <div className="wow fadeInDown" data-wow-delay="0.3s">
                   <input
                     type="Email"
@@ -370,12 +301,12 @@ function App() {
         <Footer />
       </footer>
 
-      <a
+      {/* <a
         href="#"
-        className="back-to-top w-10 h-10 fixed bottom-0 right-0 mb-5 mr-5 flex items-center justify-center rounded-full bg-blue-600 text-white text-lg z-20 duration-300 hover:bg-blue-400"
+        className="back-to-top w-10 h-10 fixed bottom-0 right-12 mb-5 mr-5 flex items-center justify-center rounded-full bg-blue-600 text-white text-lg z-20 duration-300 hover:bg-blue-400"
       >
         <BiUpArrowCircle className="text-xl" />
-      </a>
+      </a> */}
     </div>
   );
 }
@@ -383,18 +314,24 @@ function App() {
 export default App;
 const sliderContent = [
   {
-    heading: "Electrical Materials",
+    heading: "Building Materials",
     content: "All kind of Building Materials",
-    image: slider3,
+    image: slider4,
   },
   {
     heading: "Plumbing Materials",
-    content: "All kind of Building Materials",
+    // content: "All kind of Building Materials",
     image: slider2,
   },
   {
+    heading: "Electrical Materials",
+    // content: "All kind of Building Materials",
+    image: slider3,
+  },
+
+  {
     heading: "HVAC Spare Parts",
-    content: "All kind of Building Materials",
+    // content: "All kind of Building Materials",
     image: slider1,
   },
 ];
@@ -414,5 +351,103 @@ const servicesContent = [
   {
     heading: "MEP Maintenance & Civil Fit-outs",
     image: mep,
+  },
+];
+const productContent = [
+  {
+    heading: "Wires and Cables",
+    image: wires,
+  },
+  {
+    heading: "Isolators",
+    image: isolator,
+  },
+  {
+    heading: "Switch & Sockets",
+    image: switches,
+  },
+  {
+    heading: "GI Conduit & Accessories",
+    image: gi,
+  },
+  {
+    heading: "PVC Conduit & Accessories",
+    image: pvc,
+  },
+  {
+    heading: "Flexible Cables",
+    image: flexible,
+  },
+  {
+    heading: "GI Flexible Conduit & Accessories",
+    image: flexible2,
+  },
+  {
+    heading: "AC Copper Coils",
+    image: copper,
+  },
+  {
+    heading: "AC Compressors",
+    image: AC,
+  },
+  {
+    heading: "Rubber Insulations",
+    image: rubber,
+  },
+  {
+    heading: "Fiber Glass Insulations",
+    image: fiver,
+  },
+  {
+    heading: "AC Gas",
+    image: ACGas,
+  },
+  {
+    heading: "UPVC & PVC Fittings",
+    image: UPVC,
+  },
+  {
+    heading: "PPR Pipes & Fittings",
+    image: ppr,
+  },
+  {
+    heading: "Sanitary Wares",
+    image: sanitary,
+  },
+  {
+    heading: "Copper Pipes & Fittings",
+    image: copperpipe,
+  },
+  {
+    heading: "SS, Ci, PVC Floor Traps",
+    image: ss,
+  },
+  {
+    heading: "Mixers",
+    image: mixer,
+  },
+  {
+    heading: "Heaters",
+    image: heater,
+  },
+  {
+    heading: "GI & MI Fittings",
+    image: gimi,
+  },
+  {
+    heading: "MS, SS & GI Pipes",
+    image: msssgi,
+  },
+  {
+    heading: "GI & Aluminium Sheets",
+    image: gi2,
+  },
+  {
+    heading: "Wood & Plywoods",
+    image: wood,
+  },
+  {
+    heading: "Safety Items",
+    image: safety,
   },
 ];

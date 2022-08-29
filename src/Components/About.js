@@ -26,18 +26,21 @@ const About = () => {
                 data-wow-delay="0.3s"
               >
                 We Provide Quality Service <br />
-                <span className="primary"> In Qatar</span> With Proud!!
+                <span className="primary"> In Qatar</span> With Proud!! ssss
               </h2>
 
               <div className="flex flex-wrap">
                 <div className="w-full md:w-2/3">
                   <div className="mr-3 pr-6 text-lg text-justify">
-                    AARO TECH Trading & Contracting is the one-stop solution for
-                    all your material needs, building material supplier in
-                    Qatar. Our motive is not just to sell, but be your companion
-                    in buying the best quality building materials to build your
-                    dream home. Also we provide our services in MEP Maintenance
-                    and Civil Fit-outs.
+                    AARO TECH TRADING & CONT W.L.L. has been established by the
+                    good team who has more then 14 years experience in qatar in
+                    various fields of trading, building materials & MEP
+                    maintenance / Civil Fit-outs works. During these 14 years,
+                    we earned better experience of up & down market level &
+                    different kind of new ethics & latest technologies in all
+                    the above fields. The aim of AARO TECH TRADING & CONT. W.L.L
+                    is to give better quality services and fulfill client
+                    requirements with reasonable profit
                   </div>
                 </div>
               </div>

@@ -61,9 +61,9 @@ const Navbar = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               ></path>
             </svg>
           </button>
@@ -75,7 +75,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#"
-                  className="hover:text-[#ec1f24] hover:font-bold block uppercase text-lg  py-2 pr-4 pl-3   rounded md:bg-transparent  md:p-0   md:dark:bg-transparent"
+                  className="hover:text-[#ec1f24]   block uppercase text-lg  py-2 pr-4 pl-3   rounded md:bg-transparent  md:p-0   md:dark:bg-transparent"
                 >
                   Home
                 </a>
@@ -83,7 +83,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#services"
-                  className="hover:text-[#ec1f24] hover:font-bold block uppercase text-lg py-2 pr-4 pl-3 text-gray-700 rounded md:hover:bg-transparent md:border-0  md:p-0 dark:text-gray-400  dark:hover:bg-gray-700 "
+                  className="hover:text-[#ec1f24]  block uppercase text-lg py-2 pr-4 pl-3 text-gray-700 rounded md:hover:bg-transparent md:border-0  md:p-0 dark:text-gray-400  dark:hover:bg-gray-700 "
                 >
                   Services
                 </a>
@@ -91,7 +91,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#products"
-                  className="hover:text-[#ec1f24] hover:font-bold block uppercase text-lg py-2 pr-4 pl-3 text-gray-700 rounded md:hover:bg-transparent md:border-0  md:p-0 dark:text-gray-400  dark:hover:bg-gray-700 "
+                  className="hover:text-[#ec1f24]  block uppercase text-lg py-2 pr-4 pl-3 text-gray-700 rounded md:hover:bg-transparent md:border-0  md:p-0 dark:text-gray-400  dark:hover:bg-gray-700 "
                 >
                   Products
                 </a>
@@ -99,23 +99,23 @@ const Navbar = () => {
               <li>
                 <a
                   href="#about"
-                  className="hover:text-[#ec1f24] hover:font-bold block uppercase text-lg py-2 pr-4 pl-3 text-gray-700 rounded md:hover:bg-transparent md:border-0  md:p-0 dark:text-gray-400  dark:hover:bg-gray-700 "
+                  className="hover:text-[#ec1f24]  block uppercase text-lg py-2 pr-4 pl-3 text-gray-700 rounded md:hover:bg-transparent md:border-0  md:p-0 dark:text-gray-400  dark:hover:bg-gray-700 "
                 >
                   About
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="#group"
-                  className="hover:text-[#ec1f24] hover:font-bold block uppercase text-lg py-2 pr-4 pl-3 text-gray-700 rounded md:hover:bg-transparent md:border-0  md:p-0 dark:text-gray-400  dark:hover:bg-gray-700 "
+                  className="hover:text-[#ec1f24]  block uppercase text-lg py-2 pr-4 pl-3 text-gray-700 rounded md:hover:bg-transparent md:border-0  md:p-0 dark:text-gray-400  dark:hover:bg-gray-700 "
                 >
                   Group
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
                   href="#contact"
-                  className="hover:text-[#ec1f24] hover:font-bold block uppercase text-lg py-2 pr-4 pl-3 text-gray-700 rounded md:hover:bg-transparent md:border-0  md:p-0 dark:text-gray-400  dark:hover:bg-gray-700 "
+                  className="hover:text-[#ec1f24]  block uppercase text-lg py-2 pr-4 pl-3 text-gray-700 rounded md:hover:bg-transparent md:border-0  md:p-0 dark:text-gray-400  dark:hover:bg-gray-700 "
                 >
                   Contact
                 </a>
